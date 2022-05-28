@@ -3,21 +3,21 @@ let button = document.getElementById('button');
 
 button.addEventListener('click', (event)=>{
     event.preventDefault();
-    validateEmail();
+    validateEmail(inputEmail.value);
 });
 
-function validateEmail(){ 
+function validateEmail(email){ 
     
     let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    let typingError = expReg.test(inputEmail.value);
+    let typingOK = expReg.test(email);
     
-    if(typingError == false){
-        error.innerHTML = 'Please provide a valid email address';
-        inputEmail.style.border = '1px solid red'
-    }else{
-        error.innerHTML = '';
-        inputEmail.value = '';
+    if(typingOK == true){
+        error.style.visibility = 'hidden';
         inputEmail.style.border = '1px solid hsl(223, 87%, 63%)'
+        inputEmail.value = '';
+    }else{
+        inputEmail.style.border = '1px solid red'
+        error.style.visibility = 'visible'; 
     }
     
 }

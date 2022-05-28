@@ -17,18 +17,17 @@ body{
 }
 .main-container{
     margin: 85px auto 60px;
-    /* width: 375px; */
 }
 .logo{
-    width: 56px;
+    width: 52px;
     display: block;
-    margin: 0 auto 44px;
+    margin: 0 auto 40px;
 }
 h1{
     font-weight: 300;
     color: var(--Gray);
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-size: 1.2em;
 }
 h1 span{
@@ -58,6 +57,10 @@ input[type="email"]:focus{
 #error{
    color: var(--LightRed); 
    font-style: italic;
+   font-size: 0.65em;
+   text-align: center;
+   margin: -5px 0 10px;
+   visibility: hidden;
 }
 input[type="submit"]{
     background-color: var(--Blue);
@@ -112,6 +115,7 @@ input[type="submit"]:hover{
 .attribution { 
     font-size: 12px; 
     text-align: center; 
+    margin-bottom: 40px;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
@@ -140,6 +144,7 @@ input[type="submit"]:hover{
         font-size: 0.8em;
     }
     #error{
+        text-align: left;
         font-size: 0.65em;
         padding-left: 24px;
      }
